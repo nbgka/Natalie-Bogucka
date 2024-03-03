@@ -22,20 +22,102 @@
 }
 
 body{
-    background-color: black;
+    background-color: rgb(204, 255, 0);
+    cursor: none;
 }
 
-.container{
+a:hover{
+    cursor: none;
+}
+
+.cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    mix-blend-mode: difference;
+    border-radius: 50%; 
+    pointer-events: none; /* Ensure the custom cursor doesn't interfere with content */
+}
+
+.container {
     width: 100%;
-    height: 100vh;
+    height: 8vh;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: #730045 2px solid;
 }
 
-h1{
+.container h1 {
     font-family: rufina;
     color: white;
     font-size: 1.5rem;
+    text-align: center;
+}
+
+.container a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.container a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.header {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: rufina;
+    font-size: 1.5rem;
+}
+
+.logo {
+    width: 100%;
+    padding-left: 2%;
+}
+
+.logo h1{
+    font-family: rufina;
+    color: white;
+    font-size: 2.5rem;
     text-align: left;
 }
+
+.work{
+    padding: 5%;
+    /* border-left: #730045 2px dashed;
+    border-right: #730045 2px dashed; */
+    
+}
+
+.about{
+    padding: 5%;
+}
+
+.contact{
+    padding: 5%;
+    /* border-left: #730045 2px dashed; */
+}
+
