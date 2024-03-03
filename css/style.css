@@ -1,0 +1,41 @@
+@font-face {
+    font-family: lexendMega;
+    src: url(../media/fonts/lexendMega.ttf);
+}
+@font-face {
+    font-family: lexendMegaBold;
+    src: url(../media/fonts/lexendMegaBold.ttf);
+}
+@font-face {
+    font-family: rufina;
+    src: url(../media/fonts/rufina.ttf);
+}
+
+@font-face {
+    font-family: rufinaBold;
+    src: url(../media/fonts/rufinaBold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: rufina;
+    color: white;
+    font-size: 1.5rem;
+    text-align: left;
+}
