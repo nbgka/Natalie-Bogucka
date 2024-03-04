@@ -28,21 +28,10 @@
 
 body{
     background-color: black;
-    cursor: none;
 }
 /* ----------^^^^ GENERAL ^^^^---------- */
 
 /* ----------vvvv Cursor Interactions vvvv---------- */
-.custom-cursor {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-image: url('../media/images/crossCurser.png');
-    background-size: contain;
-    pointer-events: none;
-    z-index: 9999;
-}
-
 a:hover{
     animation: hoverChange 2s;
 }

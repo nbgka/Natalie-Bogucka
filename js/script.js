@@ -7,17 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
     header.style.color = colors[randomIndex];
     footer.style.color = colors[randomIndex]; // Applying the random color to the footer header as well
 
-    // Create custom cursor element
-    var customCursor = document.createElement("div");
-    customCursor.classList.add("custom-cursor");
-    document.body.appendChild(customCursor);
-
-    // Track mouse movement and update custom cursor position
-    document.addEventListener("mousemove", function(e) {
-        customCursor.style.left = e.clientX + "px";
-        customCursor.style.top = e.clientY + "px";
-    });
-
     // Event listener for form submission button
     document.getElementById('submit').addEventListener('click', function(event) {
         event.preventDefault();
