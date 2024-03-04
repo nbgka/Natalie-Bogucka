@@ -31,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
         // Log form data to console
         console.log(formData);
 
-        // Display the variable name as an h1 element
-        let h1Element = document.createElement('h1');
-        h1Element.textContent = name;
-        document.body.appendChild(h1Element);
+        // // Display the variable name as an h1 element
+        // let h1Element = document.createElement('h1');
+        // h1Element.textContent = name;
+        // document.body.appendChild(h1Element);
 
         // Change background color based on confirmation email checkbox
         document.body.style.backgroundColor = confirmationEmail ? 'blue' : 'black';
