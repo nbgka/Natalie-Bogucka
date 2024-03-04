@@ -7,28 +7,131 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-         <!-- To create the cursor -->
-    <div class="cursor"></div>
-    
-        <div class="container">
+    <!-- vvvv MENU TOP BAR vvvv -->
+<div class="containerMenu">
             <div class="header">
-
                 <div class="logo">
-                    <h1><a href="index.html">NATALIE BOGUCKA</a></h1>
+                    <!-- <h1><a href="index.html">NATALIE BOGUCKA</a></h1> -->
+                    <h1>NATALIE BOGUCKA</h1>
                 </div>
                 <div class="menu">
                         <div class="work"><a href="work.html">WORK</a></div>
 
-                        <div class= "about"><a href="about.html">ABOUT</a></div>
+                        <div class="about"><a href="about.html">ABOUT</a></div>
 
                         <div class="contact"><a href="contact.html">CONTACT</a></div>
                 </div>
+            </div>
+</div>
+    <!-- ^^^^^ MENU TOP BAR ^^^^ -->
 
+    <!-- vvvv SCROLL BAR ANIMATION vvvv -->
+<div class="scroll-right">
+    <p>GRAPHIC DESIGNER & DIGITAL ARTIST</p>
+</div>
+    <!-- ^^^^ SCROLL BAR ANIMATION ^^^^ -->
+
+    <!--vvvv Project Content vvvv -->
+<div class="projectContainers">
+        <div class="projectsAll">
+            <div class="projectOne">
+                <img src="media/images/subterranean.jpg" alt="Image 1">
+                <a href="work.html">Subterranean</a>
             </div>
         </div>
-    
-    
+
+        <div class="projectsAll">
+            <div class="projectTwo">
+                <img src="media/images/makeZine.jpg" alt="Make A Dent In The City Zine">
+                <a href="work.html">Make A Dent In The City</a>
+            </div>
+        </div>
+
+        <div class="projectsAll">
+            <div class="projectThree">
+                <img src="media/images/body.jpg" alt="BODY Poster">
+                <a href="work.html">BODY</a>
+            </div>
+        </div>
+
+        <div class="projectsAll">
+            <div class="projectFour">
+                <img src="media/images/designPolitics.jpg" alt="Design + Politics Instagram">
+                <a href="work.html">Design + Politics</a>
+            </div>
+        </div>
+
+        <div class="projectsAll">
+            <div class="projectFive">
+                <img src="media/images/includeMeWebsite.jpg" alt="Include Me In the Pattern Website Design">
+                <a href="work.html">Include Me In the Pattern</a>
+            </div>
+        </div>
+
+        <div class="projectsAll">
+            <div class="projectSix">
+                <img src="media/images/oddsAndEnds.jpg" alt="Odds And Ends Logo">
+                <a href="work.html">Odds And Ends</a>
+            </div>
+        </div>
+</div>
+    <!--^^^^^ Project Content ^^^^ -->  
+
+<!-- vvvv SCROLL BAR ANIMATION vvvv -->
+<div class="scroll-right">
+    <p>GET IN CONTACT</p>
+</div>
+<!-- ^^^^ SCROLL BAR ANIMATION ^^^^ -->
+
+<!--vvvv Contact Form vvvv -->
+<div class="formContainer">
+    <form id="form-container">
+            <h1>Send A Message</h1>
+
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" placeholder="Type your name here"><br><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Type your name here"><br><br>
+
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" cols="30" rows="5"></textarea><br><br>
+
+            <div class="checkboxContainer">
+                <label for="yes">Would you like a confirmation email?</label>
+                <input type="checkbox" name="yes" id="yes"><br><br>
+            </div>
+
+            <input type="submit" value="Submit" id="submit">
+            
+            <!-- Thank you message -->
+            <div id="thankYouMessage" style="display: none; color: white;">Sent!</div>
+
+    </form>
+</div>
+    <!--^^^^^ Contact Form ^^^^ -->
+
+<!-- vvvv SCROLL BAR ANIMATION vvvv -->
+<div class="scroll-right">
+    <p>GRAPHIC DESIGNER & DIGITAL ARTIST</p>
+</div>
+<!-- ^^^^ SCROLL BAR ANIMATION ^^^^ -->
+
+    <!-- Footer -->
+<div class="containerMenuFooter">
+    <div class="footer">
+        <div class="logoFooter">
+            <h1>NATALIE BOGUCKA</h1>
+        </div>
+        <div class="menuFooter">
+            <div class="workFooter"><a href="work.html">WORK</a></div>
+            <div class="aboutFooter"><a href="about.html">ABOUT</a></div>
+            <div class="contactFooter"><a href="contact.html">CONTACT</a></div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
     <script src="js/script.js"></script> 
 </body>
 </html>

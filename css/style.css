@@ -1,3 +1,4 @@
+/* ----------vvvv GENERAL vvvv---------- */
 @font-face {
     font-family: lexendMega;
     src: url(../media/fonts/lexendMega.ttf);
@@ -21,55 +22,58 @@
     padding: 0;
 }
 
+.element-with-custom-cursor {
+    cursor: auto;
+}
+
 body{
-    background-color: rgb(204, 255, 0);
+    background-color: black;
     cursor: none;
+}
+/* ----------^^^^ GENERAL ^^^^---------- */
+
+/* ----------vvvv Cursor Interactions vvvv---------- */
+.custom-cursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('../media/images/crossCurser.png');
+    background-size: contain;
+    pointer-events: none;
+    z-index: 9999;
 }
 
 a:hover{
-    cursor: none;
+    animation: hoverChange 2s;
 }
 
-.cursor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    background-color: blue;
-    mix-blend-mode: difference;
-    border-radius: 50%; 
-    pointer-events: none; /* Ensure the custom cursor doesn't interfere with content */
-}
+/* ----------^^^^ Cursor Interactions ^^^^---------- */
 
-.container {
+/* ----------vvvv MENU TOP BAR vvvv---------- */
+.containerMenu {
     width: 100%;
     height: 8vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: black;
+    /* background-color: black; */
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: #730045 2px solid;
 }
 
-.container h1 {
-    font-family: rufina;
+.containerMenu h1 {
+    /* font-family: rufina; */
     color: white;
     font-size: 1.5rem;
     text-align: center;
 }
 
-.container a {
+.containerMenu a {
     color: white;
     text-decoration: none;
     margin-bottom: 10px;
-}
-
-.container a:hover {
-    color: rgb(255, 0, 0);
 }
 
 .header {
@@ -79,7 +83,7 @@ a:hover{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: black;
+    /* background-color: black; */
 }
 
 .menu {
@@ -90,7 +94,7 @@ a:hover{
     width: 100%;
     height: 100%;
     font-family: rufina;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .logo {
@@ -109,7 +113,6 @@ a:hover{
     padding: 5%;
     /* border-left: #730045 2px dashed;
     border-right: #730045 2px dashed; */
-    
 }
 
 .about{
@@ -120,4 +123,274 @@ a:hover{
     padding: 5%;
     /* border-left: #730045 2px dashed; */
 }
+/* ----------^^^^ MENU TOP BAR ^^^^---------- */
 
+/* ----------vvvv SCROLL BAR vvvv---------- */
+.scroll-right {
+    height: 35px;    
+    overflow: hidden;
+    position: relative;
+    color: #730045;
+}
+.scroll-right p {
+    font-family: lexendMegaBold;
+    font-size: 0.8rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 35px;
+    text-align: center;
+ /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);    
+    transform:translateX(100%);
+ /* Apply animation to this element */    
+    -moz-animation: scroll-left 30s linear infinite;
+    -webkit-animation: scroll-left 30s linear infinite;
+    animation: scroll-left 30s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+    0%   { -moz-transform: translateX(-100%); }
+    100% { -moz-transform: translateX(100%); }
+}
+@-webkit-keyframes scroll-left {
+    0%   { -webkit-transform: translateX(-100%); }
+    100% { -webkit-transform: translateX(100%); }
+}
+@keyframes scroll-left {
+    0%   { 
+        -moz-transform: translateX(-100%); /* Browser bug fix */
+        -webkit-transform: translateX(-100%); /* Browser bug fix */
+        transform: translateX(-100%);       
+    }
+    100% { 
+        -moz-transform: translateX(100%); /* Browser bug fix */
+        -webkit-transform: translateX(100%); /* Browser bug fix */
+        transform: translateX(100%); 
+    }
+}
+/* ----------^^^^ SCROLL BAR ^^^^---------- */
+
+/* ----------vvvv PROJECTS vvvv---------- */
+.projectContainers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: #730045 2px solid;
+}
+
+.projectsAll {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: lexendMega;
+    color: white;
+    font-size: 4.6rem;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-bottom: #730045 2px solid;
+    position: relative; /* Add position relative for image positioning */
+}
+
+.projectsAll a {
+    color: white;
+    text-decoration: none;
+}
+
+.projectContainers img {
+    display: none; 
+    max-width: 250px;
+    max-height: 250px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px blue;
+}
+
+.projectsAll a:hover + img {
+    display: block;
+    z-index: 999;
+}
+/* ----------^^^^ PROJECTS ^^^^---------- */
+
+
+
+/* ----------vvvv Contact Form vvvv---------- */
+/* Style for form elements */
+.formContainer{
+    border-top: #730045 2px solid;
+    border-bottom: #730045 2px solid;
+    padding-bottom: 1.3%;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  /* center all text and elements */
+      text-align: center;
+      font-family: lexendMegaBold;
+      margin: 0 auto;
+      width: 50%;
+      padding: 20px;
+      border: 2px solid #730045;
+      border-radius: 10px;
+      color: white;
+      background-color: black;
+      margin-top: 20px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  textarea {
+    padding: 10px;
+    border: 2px solid #730045;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-family: lexendMega;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid #730045;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: lexendMega;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: blue;
+    animation: hoverBGChange 1s;
+  }
+
+  #form-container h1{
+    margin-bottom: 3%;
+  }
+
+  #form-container p{
+    color: white;
+  }
+
+  .checkboxContainer{
+    font-size: 1.2rem;
+  }
+
+  #thankYouMessage{
+    margin-top: 3%;
+    font-size: 2rem;
+    text-align: left;
+  }
+/* ----------^^^^ Contact From ^^^^---------- */
+
+/* ---------vvvv FOOTER vvvv--------- */
+/* ----------vvvv MENU TOP BAR vvvv---------- */
+.containerMenuFooter {
+    border-top: #730045 2px solid;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: black; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.containerMenuFooter h1 {
+    /* font-family: rufina; */
+    color: white;
+    text-align: center;
+}
+
+.containerMenuFooter a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: black; */
+}
+
+.menuFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: rufina;
+    font-size: 1rem;
+}
+
+.logoFooter {
+    width: 100%;
+    padding-left: 2%;
+}
+
+.logoFooter h1{
+    font-family: rufina;
+    color: white;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.workFooter{
+    padding: 5%;
+    /* border-left: #730045 2px dashed;
+    border-right: #730045 2px dashed; */
+}
+
+.aboutFooter{
+    padding: 5%;
+}
+
+.contactFooter{
+    padding: 5%;
+}
+
+/* ----------^^^^ FOOTER ^^^^---------- */
+
+/* ----------vvvv ANIMATIONS vvvv---------- */
+@keyframes hoverChange {
+    0% {
+        color: white;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+@keyframes hoverBGChange {
+    0% {
+        background-color: black;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+/* ----------^^^^ ANIMATIONS ^^^^---------- */
