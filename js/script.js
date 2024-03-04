@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to handle form submission
     function handleFormSubmit() {
         const name = document.getElementById('name').value;
-        const lastName = document.getElementById('lastName').value;
+        const lastName = document.getElementById('email').value;
         const message = document.getElementById('message').value;
         const confirmationEmail = document.getElementById('yes').checked;
 
         // Create an object to store the form data
         const formData = {
             name: name,
-            lastName: lastName,
+            email: email,
             message: message,
             confirmationEmail: confirmationEmail
         };
