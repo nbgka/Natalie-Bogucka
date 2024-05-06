@@ -17,6 +17,31 @@
     src: url(../media/fonts/rufinaBold.ttf);
 }
 
+@font-face {
+    font-family: Avelire;
+    src: url(../media/fonts/Avelire.ttf);
+}
+
+@font-face {
+    font-family: BlackDemon;
+    src: url(../media/fonts/BlackDemon.ttf);
+}
+
+@font-face {
+    font-family: Nightshade;
+    src: url(../media/fonts/Nightshade.ttf);
+}
+
+@font-face {
+    font-family: NotoSans;
+    src: url(../media/fonts/NotoSans.ttf);
+}
+
+@font-face {
+    font-family: NotoSans-Italic;
+    src: url(../media/fonts/NotoSans-Italic.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -39,6 +64,19 @@ a:hover{
 /* ----------^^^^ Cursor Interactions ^^^^---------- */
 
 /* ----------vvvv MENU TOP BAR vvvv---------- */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 10%;
+    height: auto;
+    margin-right: 3.5%;
+    border-radius: 100%;
+    border: rgb(104, 0, 0) 2px solid;
+}
+
 .containerMenu {
     width: 100%;
     height: 8vh;
@@ -49,7 +87,7 @@ a:hover{
     /* background-color: black; */
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: #730045 2px solid;
+    border-bottom: rgb(104, 0, 0) 2px solid;
 }
 
 .containerMenu h1 {
@@ -79,10 +117,11 @@ a:hover{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding-top: 0.8%;
     align-items: center;
     width: 100%;
     height: 100%;
-    font-family: rufina;
+    font-family: Nightshade; 
     font-size: 1.2rem;
 }
 
@@ -92,13 +131,14 @@ a:hover{
 }
 
 .logo h1{
-    font-family: rufina;
+    font-family: Nightshade;
     color: white;
     font-size: 2.5rem;
+    padding-top: 5%;
     text-align: left;
 }
 
-.work{
+.book{
     padding: 5%;
     /* border-left: #730045 2px dashed;
     border-right: #730045 2px dashed; */
@@ -112,6 +152,10 @@ a:hover{
     padding: 5%;
     /* border-left: #730045 2px dashed; */
 }
+
+.reviews{
+    padding: 5%;
+}
 /* ----------^^^^ MENU TOP BAR ^^^^---------- */
 
 /* ----------vvvv SCROLL BAR vvvv---------- */
@@ -119,11 +163,11 @@ a:hover{
     height: 35px;    
     overflow: hidden;
     position: relative;
-    color: #730045;
+    color: rgb(104, 0, 0);
 }
 .scroll-right p {
-    font-family: lexendMegaBold;
-    font-size: 0.8rem;
+    font-family: rufina;
+    font-size: 1.5rem;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -168,7 +212,7 @@ a:hover{
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    border-top: #730045 2px solid;
+    border-top: rgb(104, 0, 0) 2px solid;
 }
 
 .projectsAll {
@@ -179,12 +223,12 @@ a:hover{
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    font-family: lexendMega;
+    font-family: Avelire;
     color: white;
-    font-size: 4.6rem;
+    font-size: 6rem;
     padding-top: 1%;
     padding-bottom: 1%;
-    border-bottom: #730045 2px solid;
+    border-bottom: rgb(104, 0, 0) 2px solid;
     position: relative; /* Add position relative for image positioning */
 }
 
@@ -200,9 +244,9 @@ a:hover{
     position: absolute;
     top: 50%;
     left: 50%;
-    border-radius: 10px;
     transform: translate(-50%, -50%);
-    box-shadow: 0 4px 8px blue;
+    border-radius: 3%;
+    box-shadow: 0 4px 8px red;
 }
 
 .projectsAll a:hover + img {
@@ -210,14 +254,89 @@ a:hover{
     z-index: 999;
 }
 /* ----------^^^^ PROJECTS ^^^^---------- */
+/* ----------vvvv About vvvv---------- */
+.aboutSection {
+    padding: 50px 0;
+    border-top: rgb(104, 0, 0) 2px solid;
+    border-bottom: rgb(104, 0, 0) 2px solid;
+}
 
+.aboutContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.aboutContainer h2 {
+    font-family: Nightshade;
+    font-size: 2rem;
+    color: white;
+}
+
+.aboutContainer p {
+    padding-right: 5%;
+    padding-left: 5%;
+    font-family: rufina;
+    font-size: 1.2rem;
+    color: white;
+    
+}
+/* ----------^^^^ ABOUT ^^^^---------- */
+
+/* Customer Reviews Section */
+.customerReviews {
+    background-color: black;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    border-top: rgb(104, 0, 0) 2px solid;
+    border-bottom: rgb(104, 0, 0) 2px solid;
+}
+.customerReviews h2 {
+    font-family: Nightshade;
+    font-size: 2rem;
+    color: white;
+}
+.reviewContainer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.review {
+    border: 2px solid rgb(104, 0, 0);
+    background-color: #270000;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.reviewContent p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.reviewContent .author {
+    font-style: italic;
+    color: white;
+}
+/* End Customer Reviews Section */
 
 
 /* ----------vvvv Contact Form vvvv---------- */
 /* Style for form elements */
 .formContainer{
-    border-top: #730045 2px solid;
-    border-bottom: #730045 2px solid;
+    border-top: rgb(104, 0, 0) 2px solid;
+    border-bottom: rgb(104, 0, 0) 2px solid;
     padding-bottom: 1.5%;
 }
 
@@ -227,11 +346,11 @@ a:hover{
     align-items: center;
   /* center all text and elements */
       text-align: center;
-      font-family: lexendMegaBold;
+      font-family: rufina;
       margin: 0 auto;
       width: 50%;
       padding: 20px;
-      border: 2px solid #730045;
+      border: 2px solid rgb(104, 0, 0);
       border-radius: 10px;
       color: white;
       background-color: black;
@@ -246,26 +365,26 @@ a:hover{
   input[type="text"],
   textarea {
     padding: 10px;
-    border: 2px solid #730045;
+    border: 2px solid rgb(104, 0, 0);
     background-color: black;
     color: white;
     border-radius: 4px;
     margin-bottom: 10px;
-    font-family: lexendMega;
+    font-family: rufina;
   }
   
   input[type="submit"] {
     padding: 10px 20px;
     background-color: black;
     color: white;
-    border: 2px solid #730045;
+    border: 2px solid rgb(104, 0, 0);
     border-radius: 4px;
     cursor: pointer;
-    font-family: lexendMega;
+    font-family: rufina;
   }
   
   input[type="submit"]:hover {
-    background-color: blue;
+    background-color: #11011c;
     animation: hoverBGChange 1s;
   }
 
@@ -291,7 +410,7 @@ a:hover{
 /* ---------vvvv FOOTER vvvv--------- */
 /* ----------vvvv MENU TOP BAR vvvv---------- */
 .containerMenuFooter {
-    border-top: #730045 2px solid;
+    border-top: rgb(104, 0, 0) 2px solid;
     width: 100%;
     height: 8vh;
     display: flex;
@@ -299,7 +418,7 @@ a:hover{
     justify-content: flex-start;
     align-items: center;
     /* background-color: black; */
-    padding-top: 10px;
+    padding-top: 2%;
     padding-bottom: 10px;
 }
 
@@ -332,7 +451,7 @@ a:hover{
     align-items: center;
     width: 100%;
     height: 100%;
-    font-family: rufina;
+    font-family: Nightshade;
     font-size: 1rem;
 }
 
@@ -342,13 +461,13 @@ a:hover{
 }
 
 .logoFooter h1{
-    font-family: rufina;
+    font-family: Nightshade;
     color: white;
     font-size: 1.5rem;
     text-align: left;
 }
 
-.workFooter{
+.bookFooter{
     padding: 5%;
     /* border-left: #730045 2px dashed;
     border-right: #730045 2px dashed; */
@@ -362,6 +481,10 @@ a:hover{
     padding: 5%;
 }
 
+.reviewsFooter{
+    padding: 5%;
+}
+
 /* ----------^^^^ FOOTER ^^^^---------- */
 
 /* ----------vvvv ANIMATIONS vvvv---------- */
@@ -370,7 +493,7 @@ a:hover{
         color: white;
     }
     100% {
-        color: blue;
+        color: rgb(104, 0, 0);
     }
 }
 
@@ -379,7 +502,7 @@ a:hover{
         background-color: black;
     }
     100% {
-        background-color: blue;
+        background-color: rgb(104, 0, 0);
     }
 }
 /* ----------^^^^ ANIMATIONS ^^^^---------- */

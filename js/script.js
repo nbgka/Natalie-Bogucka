@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Random color for header text
     var header = document.querySelector(".containerMenu h1");
     var footer = document.querySelector(".containerMenuFooter h1"); // Selecting the footer header
-    var colors = ["#730045", "blue", "white", "yellow"];
+    var colors = ["rgb(104, 0, 0)", "white"];
     var randomIndex = Math.floor(Math.random() * colors.length);
     header.style.color = colors[randomIndex];
     footer.style.color = colors[randomIndex]; // Applying the random color to the footer header as well
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // document.body.appendChild(h1Element);
 
         // Change background color based on confirmation email checkbox
-        document.body.style.backgroundColor = confirmationEmail ? 'blue' : 'black';
+        document.body.style.backgroundColor = confirmationEmail ? '#11011c' : 'black';
 
         // Show thank you message
         showThankYouMessage();
